@@ -1,0 +1,24 @@
+<% posts.forEach(function(post) { %>
+    <div class="post">
+        <h1><%= post.titel %></h1>
+        <p>gepost door: <%= post.poster %></p>
+        <div>
+            <% if (post.intern == 1) { %>
+                <p>intern</p>
+            <% } else { %>
+                <p>extern</p>
+            <% } %>
+        </div>
+        <p><%= post.timestamp %></p>
+        <p><%= post.description %></p>
+        <p>notion link: <%= post.notionLink %></p>
+    </div>
+<% }); %>
+
+<style>
+    .post {
+        border: 1px solid black;
+        margin: 10px;
+        padding: 10px;
+    }
+</style>

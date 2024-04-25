@@ -1,39 +1,51 @@
-// const express = require("express");
-// const path = require("path");
+const express = require('express');
+const mysql = require('mysql');
 
-// const app = express();
-// const port = 5000;
+const app = express();
+const port = 5000;
 
-// app.get("/", (req, res) => {
-//     res.sendFile(path.join(__dirname, "views/index.html"));
-// });
-
-// app.listen(port, () => {
-//     console.log("Listening on port " + port);
-//     console.log("http://localhost:" + port);
-// });
-
-const mysql = require("mysql");
 const connection = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "",
-    database: "vraag_aanbod"
+    host: 'localhost',
+    user: 'root',
+    password: '',
+    database: 'vraag_aanbod'
 });
 
-function sqlQuery(sql) {
-    connection.connect((err) => {
-        connection.query(sql, (err, rows) => {
-            if (err) {
-                console.error(err.stack);
-                return;
-            }
+connection.connect((err) => {
+    if (err) {
+        console.error('Error connecting to the database: ' + err.stack);
+        return;
+    }
+});
 
+// view engine set to ejs
+app.set('view engine', 'ejs');
 
-            console.log(rows);
+app.get('/', (req, res) => {
+    connection.query('SELECT * FROM posts', (err, results) => {
+        if (err) {
+            console.error('Error fetching posts: ' + err.stack);
+            return;
+        }
+
+        const posts = results.map(result => {
+            return {
+                id: result.id,
+                titel: result.titel,
+                description: result.description,
+                intern: result.intern,
+                imagePath: result.imagePth,
+                notionLink: result.notionLink,
+                poster: result.poster,
+                werkveld: result.werkveld,
+                timestamp: result.timestamp
+            };
         });
+
+        res.render('index', { posts: posts});
     });
-}
+});
 
-
-sqlQuery("SELECT * FROM posts");
+app.listen(port, () => {
+    console.log(`listening on http://localhost:${port}`);
+});
