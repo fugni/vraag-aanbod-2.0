@@ -34,7 +34,7 @@ app.get('/', (req, res) => {
                 titel: result.titel,
                 description: result.description,
                 intern: result.intern,
-                imagePath: result.imagePth,
+                imagePath: result.imagePath,
                 notionLink: result.notionLink,
                 poster: result.poster,
                 werkveld: result.werkveld,
