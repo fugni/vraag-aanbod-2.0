@@ -1,3 +1,4 @@
+const e = require('express');
 const express = require('express');
 const mysql = require('mysql');
 
@@ -42,9 +43,27 @@ app.get('/', (req, res) => {
             };
         });
 
-        res.render('index', { posts: posts});
+        res.render('posts', { posts: posts });
     });
 });
+
+app.get('/new-post', (req, res) => {
+    res.render('new-post');
+});
+
+app.get('/create-post', (req, res) => {
+    const { titel, description, intern, imagePath, notionLink, poster, werkveld } = req.query;
+
+    connection.query('INSERT INTO posts (titel, description, intern, imagePath, notionLink, poster, werkveld) VALUES (?, ?, ?, ?, ?, ?, ?)', [titel, description, intern, imagePath, notionLink, poster, werkveld], (err, results) => {
+        if (err) {
+            console.error('Error inserting post: ' + err.stack);
+            return;
+        }
+
+        res.redirect('/');
+    });
+});
+
 
 app.listen(port, () => {
     console.log(`listening on http://localhost:${port}`);
