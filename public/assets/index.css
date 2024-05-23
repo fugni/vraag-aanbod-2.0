@@ -1,0 +1,29 @@
+#intern{
+    background-color: green;
+}
+
+#extern{
+    background-color: red;
+}
+
+#container{
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(80%);
+    background-color: aquamarine;
+}
+
+#main{
+    display: flex;
+    justify-content: center;
+    background-color: blue;
+}
+
+.post{
+    width: calc(25%  - 42px);
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+
+}

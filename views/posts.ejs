@@ -1,24 +1,23 @@
-<% posts.forEach(function(post) { %>
-    <div class="post">
-        <h1><%= post.titel %></h1>
-        <p>gepost door: <%= post.poster %></p>
-        <div>
-            <% if (post.intern == 1) { %>
-                <p>intern</p>
-            <% } else { %>
-                <p>extern</p>
-            <% } %>
-        </div>
-        <p><%= post.timestamp %></p>
-        <p><%= post.description %></p>
-        <p>notion link: <%= post.notionLink %></p>
-    </div>
-<% }); %>
+<link rel="stylesheet" href="/assets/index.css">
 
-<style>
-    .post {
-        border: 1px solid black;
-        margin: 10px;
-        padding: 10px;
-    }
-</style>
+<a href="/new-post">new post!</a>
+<div id="main">
+    <div id="container">
+        <% posts.forEach(function(post) { %>
+        <div class="post">
+            <h1><%= post.titel %></h1>
+            <p>gepost door: <%= post.poster %></p>
+            <div>
+                <% if (post.intern == 1) { %>
+                    <p id="intern">intern</p>
+                <% } else { %>
+                    <p id="extern">extern</p>
+                <% } %>
+            </div>
+            <p><%= post.timestamp %></p>
+            <p><%= post.description %></p>
+            <p>notion link: <%= post.notionLink %></p>
+        </div>
+    <% }); %>
+    </div>
+</div>

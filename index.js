@@ -3,12 +3,12 @@ const express = require('express');
 const mysql = require('mysql');
 
 const app = express();
-const port = 5000;
+const port = 5002;
 
 const connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: '',
+    password: 'root',
     database: 'vraag_aanbod'
 });
 
@@ -21,6 +21,8 @@ connection.connect((err) => {
 
 // view engine set to ejs
 app.set('view engine', 'ejs');
+
+app.use(express.static("public"));
 
 app.get('/', (req, res) => {
     connection.query('SELECT * FROM posts', (err, results) => {
