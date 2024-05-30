@@ -55,6 +55,53 @@ app.get('/new-post', (req, res) => {
     res.render('new-post');
 });
 
+app.get('/dashboard', (req, res) => {
+    connection.query('SELECT * FROM posts', (err, results) => {
+        if (err) {
+            console.error('Error fetching posts: ' + err.stack);
+            return;
+        }
+
+        const posts = results.map(result => {
+            result.timestamp = result.timestamp.toISOString().split('T')[0];
+            return {
+                id: result.id,
+                titel: result.titel,
+                description: result.description,
+                intern: result.intern,
+                imagePath: result.imagePath,
+                notionLink: result.notionLink,
+                poster: result.poster,
+                werkveld: result.werkveld,
+                timestamp: result.timestamp
+            };
+        });
+
+        res.render('dashboard', { posts: posts });
+    });
+});
+
+app.get('/remove-post/', (req, res) => {
+    const { id } = req.query;
+
+    connection.query('INSERT INTO `deleted-posts` SELECT * FROM posts WHERE id = ?', [id], (err, results) => {
+        if (err) {
+            console.error('Error moving post to deleted-posts table: ' + err.stack);
+            return;
+        }
+    });
+
+    connection.query('DELETE FROM posts WHERE id = ?', [id], (err, results) => {
+        if (err) {
+            console.error('Error deleting post: ' + err.stack);
+            return;
+        }
+    });
+
+    res.redirect('/dashboard');
+});
+
+
 app.get('/create-post', (req, res) => {
     const { titel, description, intern, imagePath, notionLink, poster, werkveld } = req.query;
 

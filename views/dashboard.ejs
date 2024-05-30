@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="/assets/index.css">
+
+<div id="main">
+    <div id="container">
+        <% posts.forEach(function(post) { %>
+        <div class="post">
+            <a id="delete" href="/remove-post/?id=<%= post.id %>">!!DELETE THIS POST!!</a>
+            <h1><%= post.titel %></h1>
+            <p>Van: <%= post.poster %></p>
+            <div id="attr-container">
+                <p id="timestamp" class="attr"><%= post.timestamp %></p>
+                <% if (post.intern == 1) { %>
+                    <p id="intern" class="attr">intern</p>
+                <% } else { %>
+                    <p id="extern" class="attr">extern</p>
+                <% } %>
+                <a id="notion" class="attr" href="<%= post.notionLink %>">notion</a>
+                <p id="werkveld" class="attr"></p>
+            </div>
+            
+            <p><%= post.description %></p>
+            
+        </div>
+    <% }); %>
+    </div>
+</div>
