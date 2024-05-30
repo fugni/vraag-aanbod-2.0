@@ -33,7 +33,6 @@ app.get('/', (req, res) => {
         }
 
         const posts = results.map(result => {
-            console.log(result);
             result.timestamp = result.timestamp.toISOString().split('T')[0];
             return {
                 id: result.id,

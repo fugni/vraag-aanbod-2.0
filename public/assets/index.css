@@ -1,3 +1,12 @@
+@font-face {
+    font-family: "Buroto";
+    src: url(/assets/BUROTO/BUROTO/BurotoRegular.woff2);
+  }
+
+  *{
+    font-family: "Buroto";
+  }
+
 #intern{
     background-color: green;
     width: calc(50% - 12px);
