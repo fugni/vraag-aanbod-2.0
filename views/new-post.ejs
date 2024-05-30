@@ -9,26 +9,41 @@
     <table>
         <tr>
             <th>Title</th>
-            <th><input type="text" value="title" name="titel" placeholder="titel" required></th>
+            <th><input type="text" name="titel" placeholder="titel" required></th>
         </tr>
         <tr>
             <th>Description</th>
             <th><input type="text" name="description" placeholder="beschrijving" required></th>
         </tr>
         <tr>
-            <th></th>
+            <th>Where From</th>
+            <th>
+                <input type="radio" name="intern" value="1" required>intern
+                <input type="radio" name="intern" value="0" required>extern
+            </th>
         </tr>
-    <input type="radio" name="intern" value="1" required>intern
-    <input type="radio" name="intern" value="0" required>extern
-    <br>    
-    <label for="imagePath">image path:</label>
-    <input type="text" name="imagePath" placeholder="image path" required><br>
-    <label for="notionLink">notion link:</label>
-    <input type="text" name="notionLink" placeholder="notion link" required><br>
-    <label for="poster">de gene die deze post maakt:</label>
-    <input type="text" name="poster" placeholder="poster" required><br>
-    <!-- <label for="werkveld">werkveld:</label>
-    <input type="text" name="werkveld" placeholder="Werkveld"><br> -->
+        <tr>
+            <th>Image Path</th>
+            <th>
+                <input type="text" name="imagePath" placeholder="image path" required>
+            </th>
+        </tr>
+        <tr>
+            <th>Notion Link</th>
+            <th>
+                <input type="text" name="notionLink" placeholder="notion link" required>
+            </th>
+        </tr>
+        <tr>
+            <th>Original Poster</th>
+            <th>
+                <input type="text" name="poster" placeholder="poster" required>
+            </th>
+        </tr>
+        <tr>
+            <th>Field</th>
+            <th><input type="text" name="werkveld" placeholder="Werkveld" required></th>
+        </tr>
 </table>
     <button type="submit">submit</button>
 </form>

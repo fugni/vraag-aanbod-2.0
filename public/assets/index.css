@@ -81,6 +81,14 @@ h1 {
     flex-wrap: wrap;
 }
 
+@media screen and (max-width: 1000px) {
+    #container {
+        width: calc(100%);
+    }
+
+    .post {
+        width: calc(50% - 45px);
+    }
+
 #delete {
     background-color: red;
-}
