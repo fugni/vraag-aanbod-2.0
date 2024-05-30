@@ -1,0 +1,86 @@
+@font-face {
+    font-family: "Buroto";
+    src: url(/assets/BUROTO/BUROTO/BurotoRegular.woff2);
+}
+
+* {
+    font-family: "Buroto";
+}
+
+#intern {
+    background-color: green;
+    width: calc(50% - 12px);
+    text-align: center;
+    color: white;
+    padding: 3px;
+}
+
+#extern {
+    background-color: red;
+}
+
+#timestamp {
+    background-color: blue;
+}
+
+#notion {
+    background-color: violet;
+}
+
+#werkveld {
+    background-color: orange;
+}
+
+.attr {
+    width: calc(50% - 12px);
+    text-align: center;
+    padding: 3px;
+    margin: 3px;
+    border-radius: 5px;
+    color: white;
+}
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(80%);
+}
+
+#main {
+    display: flex;
+    justify-content: center;
+}
+
+.post {
+    width: calc(25% - 45px);
+    border-right: 5px solid black;
+    border-bottom: 5px solid black;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    background-color: white;
+}
+
+:hover.post {
+    border: 0px;
+    border-top: 5px solid #ff8f1c;
+    border-left: 5px solid #ff8f1c;
+}
+
+body {
+    background-color: #ff8f1c;
+}
+
+h1 {
+    text-align: center;
+}
+
+#attr-container {
+    display: flex;
+    /* justify-content: center; */
+    flex-wrap: wrap;
+}
+
+#delete {
+    background-color: red;
+}
