@@ -80,3 +80,15 @@ h1 {
     /* justify-content: center; */
     flex-wrap: wrap;
 }
+
+/* responsive */
+
+@media screen and (max-width: 1000px) {
+    #container {
+        width: calc(100%);
+    }
+
+    .post {
+        width: calc(50% - 45px);
+    }
+}
