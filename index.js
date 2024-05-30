@@ -1,4 +1,3 @@
-const e = require('express');
 const express = require('express');
 const mysql = require('mysql');
 
@@ -32,6 +31,8 @@ app.get('/', (req, res) => {
         }
 
         const posts = results.map(result => {
+            console.log(result);
+            result.timestamp = result.timestamp.toISOString().split('T')[0];
             return {
                 id: result.id,
                 titel: result.titel,

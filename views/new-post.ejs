@@ -1,10 +1,23 @@
+
+<head>
+    <link rel="stylesheet" href="../public/assets/new-post.css">
+    <link rel="stylesheet" href="../public/assets/index.css">
+</head>
 <a href="/">back!</a>
 
 <form action="/create-post" method="get">
-    <label for="titel">titel:</label>
-    <input type="text" name="titel" placeholder="titel" required><br>
-    <label for="description">beschrijving:</label>
-    <input type="text" name="description" placeholder="beschrijving" required><br>
+    <table>
+        <tr>
+            <th>Title</th>
+            <th><input type="text" value="title" name="titel" placeholder="titel" required></th>
+        </tr>
+        <tr>
+            <th>Description</th>
+            <th><input type="text" name="description" placeholder="beschrijving" required></th>
+        </tr>
+        <tr>
+            <th></th>
+        </tr>
     <input type="radio" name="intern" value="1" required>intern
     <input type="radio" name="intern" value="0" required>extern
     <br>    
@@ -14,6 +27,8 @@
     <input type="text" name="notionLink" placeholder="notion link" required><br>
     <label for="poster">de gene die deze post maakt:</label>
     <input type="text" name="poster" placeholder="poster" required><br>
-    <!-- <input type="text" name="werkveld" placeholder="Werkveld"><br> -->
+    <!-- <label for="werkveld">werkveld:</label>
+    <input type="text" name="werkveld" placeholder="Werkveld"><br> -->
+</table>
     <button type="submit">submit</button>
 </form>

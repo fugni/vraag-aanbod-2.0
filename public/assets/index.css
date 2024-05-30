@@ -1,29 +1,74 @@
 #intern{
     background-color: green;
+    width: calc(50% - 12px);
+    text-align: center;
+    color: white;
+    padding: 3px;
 }
 
 #extern{
     background-color: red;
 }
 
+#timestamp{
+    background-color: blue;
+}
+
+#notion{
+    background-color: violet;
+}
+
+#werkveld{
+    background-color: orange;
+
+}
+
+.attr{
+    width: calc(50% - 12px);
+    text-align: center;
+    padding: 3px;
+    margin: 3px;
+    border-radius: 5px;
+    color: white
+}
+
 #container{
     display: flex;
     flex-wrap: wrap;
     width: calc(80%);
-    background-color: aquamarine;
 }
 
 #main{
     display: flex;
     justify-content: center;
-    background-color: blue;
 }
 
 .post{
-    width: calc(25%  - 42px);
-    border: 1px solid black;
+    width: calc(25%  - 45px);
+    border-right: 5px solid black;
+    border-bottom: 5px solid black;
     border-radius: 10px;
     margin: 10px;
     padding: 10px;
+    background-color: white;
+}
 
+:hover.post{
+    border: 0px;
+    border-top: 5px solid white;
+    border-left: 5px solid white;
+}
+
+body{
+    background-color: #FF8F1C;
+}
+
+h1{
+    text-align: center;
+}
+
+#attr-container{
+    display: flex;
+    /* justify-content: center; */
+    flex-wrap: wrap;
 }

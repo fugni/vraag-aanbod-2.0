@@ -6,17 +6,20 @@
         <% posts.forEach(function(post) { %>
         <div class="post">
             <h1><%= post.titel %></h1>
-            <p>gepost door: <%= post.poster %></p>
-            <div>
+            <p>Van: <%= post.poster %></p>
+            <div id="attr-container">
+                <p id="timestamp" class="attr"><%= post.timestamp %></p>
                 <% if (post.intern == 1) { %>
-                    <p id="intern">intern</p>
+                    <p id="intern" class="attr">intern</p>
                 <% } else { %>
-                    <p id="extern">extern</p>
+                    <p id="extern" class="attr">extern</p>
                 <% } %>
+                <a id="notion" class="attr" href="<%= post.notionLink %>">notion</a>
+                <p id="werkveld" class="attr"></p>
             </div>
-            <p><%= post.timestamp %></p>
+            
             <p><%= post.description %></p>
-            <p>notion link: <%= post.notionLink %></p>
+            
         </div>
     <% }); %>
     </div>
