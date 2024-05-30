@@ -1,13 +1,13 @@
 @font-face {
     font-family: "Buroto";
     src: url(/assets/BUROTO/BUROTO/BurotoRegular.woff2);
-  }
+}
 
-  *{
+* {
     font-family: "Buroto";
-  }
+}
 
-#intern{
+#intern {
     background-color: green;
     width: calc(50% - 12px);
     text-align: center;
@@ -15,45 +15,44 @@
     padding: 3px;
 }
 
-#extern{
+#extern {
     background-color: red;
 }
 
-#timestamp{
+#timestamp {
     background-color: blue;
 }
 
-#notion{
+#notion {
     background-color: violet;
 }
 
-#werkveld{
+#werkveld {
     background-color: orange;
-
 }
 
-.attr{
+.attr {
     width: calc(50% - 12px);
     text-align: center;
     padding: 3px;
     margin: 3px;
     border-radius: 5px;
-    color: white
+    color: white;
 }
 
-#container{
+#container {
     display: flex;
     flex-wrap: wrap;
     width: calc(80%);
 }
 
-#main{
+#main {
     display: flex;
     justify-content: center;
 }
 
-.post{
-    width: calc(25%  - 45px);
+.post {
+    width: calc(25% - 45px);
     border-right: 5px solid black;
     border-bottom: 5px solid black;
     border-radius: 10px;
@@ -62,21 +61,21 @@
     background-color: white;
 }
 
-:hover.post{
+:hover.post {
     border: 0px;
-    border-top: 5px solid #FF8F1C;
-    border-left: 5px solid #FF8F1C;
+    border-top: 5px solid #ff8f1c;
+    border-left: 5px solid #ff8f1c;
 }
 
-body{
-    background-color: #FF8F1C;
+body {
+    background-color: #ff8f1c;
 }
 
-h1{
+h1 {
     text-align: center;
 }
 
-#attr-container{
+#attr-container {
     display: flex;
     /* justify-content: center; */
     flex-wrap: wrap;
