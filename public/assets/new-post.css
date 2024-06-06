@@ -1,0 +1,35 @@
+#table{
+    background-color: rgba(0, 0, 0, 0.4);
+    margin: 20px;
+    padding: 20px;
+    color: white;
+    width:50%;
+    min-width: 500px;
+    border-radius: 5px;
+}
+
+#form{
+    display: flex;
+    justify-content: center;
+
+}
+
+body{
+    background-color: #ff8f1c;
+}
+
+.click{
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    border: none;
+    margin: 20px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10%;
+    font-size: x-large;
+    text-decoration: none;
+    font-weight:bold;
+}
+
