@@ -9,10 +9,6 @@
 
 #intern {
     background-color: green;
-    width: calc(50% - 12px);
-    text-align: center;
-    color: white;
-    padding: 3px;
 }
 
 #extern {

@@ -1,12 +1,12 @@
 
 <head>
-    <link rel="stylesheet" href="../public/assets/new-post.css">
-    <link rel="stylesheet" href="../public/assets/index.css">
+    <link rel="stylesheet" href="/assets/new-post.css">
 </head>
-<a href="/">back!</a>
 
-<form action="/create-post" method="get">
-    <table>
+
+<form id="form" action="/create-post" method="get">
+    <a href="/" class="click">back!</a>
+    <table id="table">
         <tr>
             <th>Title</th>
             <th><input type="text" name="titel" placeholder="titel" required></th>
@@ -25,7 +25,7 @@
         <tr>
             <th>Image Path</th>
             <th>
-                <input type="text" name="imagePath" placeholder="image path" required>
+                <input type="text" name="imagePath" placeholder="image path">
             </th>
         </tr>
         <tr>
@@ -37,7 +37,7 @@
         <tr>
             <th>Original Poster</th>
             <th>
-                <input type="text" name="poster" placeholder="poster" required>
+                <input type="text" name="poster" placeholder="poster" required maxlength="32">
             </th>
         </tr>
         <tr>
@@ -45,5 +45,6 @@
             <th><input type="text" name="werkveld" placeholder="Werkveld" required></th>
         </tr>
 </table>
-    <button type="submit">submit</button>
+    <button class="click" type="submit">submit</button>
 </form>
+
