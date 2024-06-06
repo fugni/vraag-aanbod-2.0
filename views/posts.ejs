@@ -6,6 +6,9 @@
         <% posts.forEach(function(post) { %>
         <div class="post">
             <h1><%= post.titel %></h1>
+            <% if (post.imagePath){ %>
+                <img src="<%= post.imagePath %>">
+            <% }%>
             <p>Van: <%= post.poster %></p>
             <div id="attr-container">
                 <p id="timestamp" class="attr"><%= post.timestamp %></p>
