@@ -1,24 +1,24 @@
-#table{
+#table {
     background-color: rgba(0, 0, 0, 0.4);
     margin: 20px;
     padding: 20px;
     color: white;
-    width:50%;
+    width: 50%;
     min-width: 500px;
     border-radius: 5px;
 }
 
-#form{
+#form {
     display: flex;
     justify-content: center;
-
 }
 
-body{
+body {
     background-color: #ff8f1c;
+    width: 100%;
 }
 
-.click{
+.click {
     background-color: rgba(0, 0, 0, 0.4);
     color: white;
     border: none;
@@ -30,6 +30,35 @@ body{
     width: 10%;
     font-size: x-large;
     text-decoration: none;
-    font-weight:bold;
+    font-weight: bold;
 }
 
+:hover.click {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+@media only screen and (max-width: 800px) {
+    form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+    }
+    .click {
+        width: calc(100% - 60px);
+        height: 50px;
+    }
+    #table {
+        width: calc(100% - 60px);
+        min-width: 0;
+    }
+    .input{
+        width: 100%;
+    }
+    .radio{
+        width: 50%;
+    }
+    textarea{
+        width: 100%;
+    }
+}

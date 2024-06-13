@@ -5,7 +5,7 @@
     <div id="container">
         <% posts.forEach(function(post) { %>
         <div class="post">
-            <h1><%= post.titel %></h1>
+            <div class="title"><%= post.titel %></div>
             <% if (post.imagePath){ %>
                 <img src="<%= post.imagePath %>">
             <% }%>

@@ -67,8 +67,10 @@ body {
     background-color: #ff8f1c;
 }
 
-h1 {
+.title {
     text-align: center;
+    word-wrap: break-word;
+    font-size: xx-large;
 }
 
 #attr-container {
@@ -85,6 +87,12 @@ h1 {
     .post {
         width: calc(50% - 45px);
     }
+}
+
+.post img{
+    max-width: 60%;
+}
 
 #delete {
     background-color: red;
+}

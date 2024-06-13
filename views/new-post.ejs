@@ -1,50 +1,48 @@
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/new-post.css">
+    <title>Form Page</title>
 </head>
-
-
-<form id="form" action="/create-post" method="get">
-    <a href="/" class="click">back!</a>
-    <table id="table">
-        <tr>
-            <th>Title</th>
-            <th><input type="text" name="titel" placeholder="titel" required></th>
-        </tr>
-        <tr>
-            <th>Description</th>
-            <th><input type="text" name="description" placeholder="beschrijving" required></th>
-        </tr>
-        <tr>
-            <th>Where From</th>
-            <th>
-                <input type="radio" name="intern" value="1" required>intern
-                <input type="radio" name="intern" value="0" required>extern
-            </th>
-        </tr>
-        <tr>
-            <th>Image Path</th>
-            <th>
-                <input type="text" name="imagePath" placeholder="image path">
-            </th>
-        </tr>
-        <tr>
-            <th>Notion Link</th>
-            <th>
-                <input type="text" name="notionLink" placeholder="notion link" required>
-            </th>
-        </tr>
-        <tr>
-            <th>Original Poster</th>
-            <th>
-                <input type="text" name="poster" placeholder="poster" required maxlength="32">
-            </th>
-        </tr>
-        <tr>
-            <th>Field</th>
-            <th><input type="text" name="werkveld" placeholder="Werkveld" required></th>
-        </tr>
-</table>
-    <button class="click" type="submit">submit</button>
-</form>
-
+<body>
+    <form id="form" action="/create-post" method="get">
+        <a href="/" class="click">back!</a>
+        <table id="table">
+            <tr>
+                <th>Title</th>
+                <th><input class="input" type="text" name="titel" placeholder="titel"  required></th>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <th><textarea name="description" placeholder="beschrijving" required rows="4" cols="25"></textarea></th>
+            </tr>
+            <tr>
+                <th>Where From</th>
+                <th>
+                    <input class="radio" type="radio" name="intern" value="1" required>intern
+                    <input class="radio" type="radio" name="intern" value="0" required>extern
+                </th>
+            </tr>
+            <tr>
+                <th>Image Path</th>
+                <th><input class="input" type="text" name="imagePath" placeholder="image path"></th>
+            </tr>
+            <tr>
+                <th>Notion Link</th>
+                <th><input class="input" type="text" name="notionLink" placeholder="notion link" required></th>
+            </tr>
+            <tr>
+                <th>Original Poster</th>
+                <th><input class="input" type="text" name="poster" placeholder="poster" required maxlength="32"></th>
+            </tr>
+            <tr>
+                <th>Field</th>
+                <th><input class="input" type="text" name="werkveld" placeholder="Werkveld" maxlength="32" required></th>
+            </tr>
+        </table>
+        <button class="click" type="submit">submit</button>
+    </form>
+</body>
+</html>
