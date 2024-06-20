@@ -9,7 +9,7 @@
             <% if (post.imagePath){ %>
                 <img src="<%= post.imagePath %>">
             <% }%>
-            <p>Van: <%= post.poster %></p>
+            <p class="poster">Van: <%= post.poster %></p>
             <div id="attr-container">
                 <p id="timestamp" class="attr"><%= post.timestamp %></p>
                 <% if (post.intern == 1) { %>

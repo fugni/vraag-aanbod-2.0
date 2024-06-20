@@ -34,6 +34,7 @@
     margin: 3px;
     border-radius: 5px;
     color: white;
+    word-wrap: break-word;
 }
 
 #container {
@@ -55,6 +56,10 @@
     margin: 10px;
     padding: 10px;
     background-color: white;
+}
+
+.poster {
+    word-wrap: break-word;
 }
 
 :hover.post {
